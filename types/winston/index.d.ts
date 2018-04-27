@@ -377,7 +377,16 @@ declare namespace winston {
         | HttpTransportOptions | MemoryTransportOptions | WebhookTransportOptions | WinstonModuleTransportOptions;
 
     interface GenericTransportOptions {
-        level?: string;
+        level?: (
+            "emerg" |
+            "alert" |
+            "crit" |
+            "error" |
+            "warning" |
+            "notice" |
+            "info" |
+            "debug"
+        );
         silent?: boolean;
         raw?: boolean;
         name?: string;
